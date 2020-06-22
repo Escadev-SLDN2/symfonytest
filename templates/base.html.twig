@@ -2,11 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}{% endblock %} - Mon super site</title>
+
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        {% include "_header.html.twig" %}
+
         {% block body %}{% endblock %}
+
+        {% include "_footer.html.twig" %}
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>

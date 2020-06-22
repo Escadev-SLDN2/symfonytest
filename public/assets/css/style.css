@@ -1,0 +1,64 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    color: #ffffff;
+    background-color: #222222;
+}
+
+p:last-child {
+    margin: 0;
+}
+
+a {
+    color: green;
+}
+
+body > header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20% 60% 20%;
+    padding: 1rem;
+    background-color: #000000;
+}
+
+body > header .pagelogo {
+    flex: 1;
+    height: 5rem;
+}
+
+body > header h1 {
+    flex: 1;
+    text-align: center;
+}
+
+body > header > nav {
+    flex: 1;
+}
+
+body > header > nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+body > header > nav ul li a {
+    padding: 0.5rem 1rem;
+}
+
+body > section {
+    padding: 1rem;
+}
+
+body > footer {
+    padding: 0.5rem 1rem;
+    background-color: #000000;
+}
+
+body > footer .copyrights {
+    font-size: 0.8rem;
+    text-align: center;
+}

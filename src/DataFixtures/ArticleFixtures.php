@@ -27,6 +27,14 @@ class ArticleFixtures
                 ->setCategorie( $categorie );
         $manager->persist( $article );
 
+        $article2 = new Article();
+        $article2->setTitre( 'Le titre de mon second article' )
+                ->setContenu( "<p>Le contenu de mon article qu'il est super terrible. Lisez-le, vous serez pas déçu.</p>" )
+                ->setImage( 'article.jpg' )
+                ->setDateCreation( new \DateTime() )
+                ->setCategorie( $categorie );
+        $manager->persist( $article2 );
+
         $manager->flush();
     }
 }

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ categorie.nom }}{% endblock %}
+
+{% block body %}
+    {% for article in categorie.articles %}
+    <section>
+        <h2>{{ article.titre }}</h2>
+        <div>
+            {{ article.contenu | raw }}
+        </div>
+    </section>
+    <hr/>
+    {% endfor %}
+{% endblock %}

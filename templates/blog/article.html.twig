@@ -5,13 +5,13 @@
 {% block body %}
     <section>
         <p>
-            <small>
-                Créé le {{ article.dateCreation | date('d/m/Y') }} dans la catégorie {{ article.categorie.nom }}
-            </small>
+            <img src="{{ asset('assets/img/' ~ article.image) }}" alt="{{ article.titre }}" />
         </p>
 
         <p>
-            <img src="{{ asset('assets/img/' ~ article.image) }}" alt="{{ article.titre }}" />
+            <small>
+                Créé le {{ article.dateCreation | date('d/m/Y') }} dans la catégorie {{ article.categorie.nom }}
+            </small>
         </p>
 
         <div class="content-article">

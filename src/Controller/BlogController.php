@@ -28,7 +28,7 @@ class BlogController extends AbstractController
     {
         $article= $this->getDoctrine()->getRepository(Article::class)->find($id);
         return $this->render('blog/article.html.twig', [
-            'pagetitle' => $article->geTitre(),
+            'pagetitle' => $article->getTitre(),
             'article' => $article,
         ]);
     }

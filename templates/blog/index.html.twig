@@ -8,7 +8,7 @@
 	{% for article in categorie.articles %}
 		<section>
 			<h2>
-				<a href="{{ path('article',{'id':article.id}) }}">{{ article.titre }}</a>
+				<a href="{{ path('blog.article',{'id':article.id}) }}">{{ article.titre }}</a>
 			</h2>
 			<div>
 				{{ article.contenu | raw }}

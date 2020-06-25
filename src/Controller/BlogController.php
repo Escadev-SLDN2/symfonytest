@@ -19,4 +19,16 @@ class BlogController extends AbstractController
             'categorie' => $categorie,
         ]);
     }
+
+    /**
+     * @Route("/blog/article/{id}", name="article")
+     */
+    public function article($id)
+    {
+        $article = $this->getDoctrine()->getRepository( Article::class )->find( $id );
+        return $this->render('blog/article.html.twig', [
+            'pagetitle' => $article->getTitre(),
+            'article' => $article,
+        ]);
+    }
 }

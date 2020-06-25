@@ -1,16 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ categorie.nom }}{% endblock %}
+{% block title %}{{ article.titre }}{% endblock %}
 
 {% block body %}
-    {% for article in categorie.articles %}
     <section>
         <h2>{{ article.titre }}</h2>
-        <p><a href="{{ path('blog/article', {{ article.id }} ) }}">Voir l'article</a></p>
         <div>
             {{ article.contenu | raw }}
         </div>
     </section>
     <hr/>
-    {% endfor %}
 {% endblock %}

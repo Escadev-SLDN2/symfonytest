@@ -4,8 +4,6 @@
 
 {% block body %}
     <section>
-        <h2>{{ article.titre }}</h2>
-
         <p>
             <small>
                 Créé le {{ article.dateCreation | date('d/m/Y') }} dans la catégorie {{ article.categorie.nom }}

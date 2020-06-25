@@ -22,7 +22,7 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/blog/article/{id}", name="article")
+     * @Route("/blog/article/{id}", name="blog.article")
      */
     public function article($id)
     {

@@ -4,17 +4,7 @@
 
 {% block body %}
     <section>
-        <p>Ceci est la page d'accueil</p>
-    </section>
-
-    <hr />
-
-    <section class="last-article">
         <h2>{{ article.titre }}</h2>
-
-        <p>
-            <img src="{{ asset('assets/img/' ~ article.image) }}" alt="{{ article.titre }}" />
-        </p>
 
         <p>
             <small>
@@ -22,9 +12,13 @@
             </small>
         </p>
 
+        <p>
+            <img src="{{ asset('assets/img/' ~ article.image) }}" alt="{{ article.titre }}" />
+        </p>
+
         <div class="content-article">
             {{ article.contenu | raw }}
         </div>
-
     </section>
+    <hr/>
 {% endblock %}

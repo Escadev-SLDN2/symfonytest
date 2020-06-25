@@ -5,7 +5,8 @@
 {% block body %}
     {% for article in categorie.articles %}
     <section>
-        <h2>{{ article.titre }}</h2>
+        
+         <h2><a href="{{ path('article',{'id':article.id}) }}">{{ article.titre }}</a></h2>
         <div>
             {{ article.contenu | raw }}
         </div>

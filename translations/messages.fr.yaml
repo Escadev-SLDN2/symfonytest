@@ -1,0 +1,8 @@
+homepage:
+    menu: "accueil"
+    title: "page d'accueil"
+    content: "Ceci est la page d'accueil de mon blog."
+contact:
+    menu: "contact"
+    title: "contactez-nous"
+    content: "Ceci est la page contact de mon blog."

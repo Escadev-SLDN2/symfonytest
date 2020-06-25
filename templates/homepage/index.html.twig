@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Bienvenue !{% endblock %}
+{% block title %}{{ 'homepage.title' | trans | capitalize }}{% endblock %}
 
 {% block body %}
     <section>
-        <p>Ceci est la page d'accueil</p>
+        <p>{{ "homepage.content" | trans | capitalize }}</p>
     </section>
 {% endblock %}

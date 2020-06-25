@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contactez-nous{% endblock %}
+{% block title %}{{ 'contact.title' | trans | capitalize }}{% endblock %}
 
 {% block body %}
     <section>
-        <p>Ceci est la page de contact</p>
+        <p>{{ 'contact.content' | trans | capitalize }}</p>
     </section>
 {% endblock %}

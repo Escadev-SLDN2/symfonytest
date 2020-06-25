@@ -7,13 +7,17 @@
 
     <nav>
         <ul>
-            <li><a href="{{ path('homepage') }}">Accueil</a></li>
+            <li>
+                <a href="{{ path('homepage') }}">{{ 'homepage.menu' | trans | capitalize }}</a>
+            </li>
             {% for categorie in CategoriesService.getCategoriesList() %}
                 <li>
                     <a href="{{ path('blog', { 'id': categorie.id }) }}">{{ categorie.nom }}</a>
                 </li>
             {% endfor %}
-            <li><a href="{{ path('contact') }}">Contact</a></li>
+            <li>
+                <a href="{{ path('contact') }}">{{ 'contact.menu' | trans | capitalize }}</a>
+            </li>
         </ul>
     </nav>
 </header>

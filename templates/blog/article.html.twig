@@ -10,7 +10,7 @@
 
         <p>
             <small>
-                Créé le {{ article.dateCreation | date('d/m/Y') }} dans la catégorie {{ article.categorie.nom }}
+                Créé le {{ article.dateCreation | date('d/m/Y') }} dans la catégorie <a href="{{ path('blog',{'id':article.categorie.id}) }}">{{ article.categorie.nom }}</a>
             </small>
         </p>
 

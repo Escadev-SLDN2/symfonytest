@@ -17,7 +17,7 @@ mySQL 5.7
   
 3. Copier le fichier ".env", coller-le et renommer le ".env.local". Configurer-le. (ligne 32)  
     
-4. Installer les bundles associés aux projets :  
+4. Installer les bundles associés au projet :  
 `composer install`  
   
 5. Créer votre base de donnée avec symfony :  

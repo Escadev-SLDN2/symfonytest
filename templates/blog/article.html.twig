@@ -5,6 +5,14 @@
 {% block body %}
     <section>
         <h2>{{ article.titre }}</h2>
+        <p>
+            Créé le {{ article.dateCreation | date('d/m/Y') }} / Catégorie : {{ article.categorie.nom }}
+        </p>
+
+        <p>
+            <img src="{{ asset('assets/img/' ~ article.image) }}" alt="{{ article.titre }}" />
+        </p>
+
         <div>
             {{ article.contenu | raw }}
         </div>

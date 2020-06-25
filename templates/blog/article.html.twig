@@ -1,26 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ categorie.nom }}{% endblock %}
+{% block title %}
+    {{ article.nom }}
+{% endblock %}
 
 {% block body %}
-    {% for article in categorie.articles %}
-    <section>
-        <h2>{{ article.titre }}</h2>
+<section>
+    <h2>{{ article.titre }}</h2>
 
-        <p>
-            <img src="{{ asset('assets/img/' ~ article.image) }}" alt="{{ article.titre }}" />
-        </p>
+    <p>
+        <img src="{{ asset('assets/img/' ~ article.image) }}" alt="{{ article.titre }}"/>
+    </p>
 
-        <p>
-            <small>
-                Créé le {{ article.dateCreation | date('d/m/Y') }} dans la catégorie {{ article.categorie.nom }}
-            </small>
-        </p>
+    <p>
+        <small>
+            Créé le
+            {{ article.dateCreation | date('d/m/Y') }}
+            dans la catégorie
+            {{ article.categorie.nom }}
+        </small>
+    </p>
 
-        <div class="content-article">
-            {{ article.contenu | raw }}
-        </div>
-    </section>
-    <hr/>
-    {% endfor %}
+    <div class="content-article">
+        {{ article.contenu | raw }}
+    </div>
+
+</section>
+<hr/>
 {% endblock %}

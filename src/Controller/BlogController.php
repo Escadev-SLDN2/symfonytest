@@ -14,19 +14,19 @@ class BlogController extends AbstractController
      */
     public function index($id)
     {
-        $categorie = $this->getDoctrine()->getRepository( Categorie::class )->find( $id );
+        $categorie = $this->getDoctrine()->getRepository(Categorie::class)->find($id);
         return $this->render('blog/index.html.twig', [
             'pagetitle' => $categorie->getNom(),
             'categorie' => $categorie,
         ]);
     }
 
-   /**
+    /**
      * @Route("/blog/article/{id}", name="article")
      */
     public function article($id)
     {
-        $article = $this->getDoctrine()->getRepository( Article::class )->find( $id );
+        $article= $this->getDoctrine()->getRepository(Article::class)->find($id);
         return $this->render('blog/article.html.twig', [
             'pagetitle' => $article->getTitre(),
             'article' => $article,

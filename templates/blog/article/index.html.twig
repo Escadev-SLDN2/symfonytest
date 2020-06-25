@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ article.titre }}{% endblock %}
+
+{% block body %}
+
+    <section>
+        <h1>{{ article.titre }}</h1>
+
+        <p>
+            <img src="{{ asset('assets/img/' ~ article.image) }}" alt="{{ article.titre }}" />
+        </p>
+
+        <p>
+            <small>
+                Créé le {{ article.dateCreation | date('d/m/Y') }} dans la catégorie {{ article.categorie.nom }}
+            </small>
+        </p>
+
+        <div>
+            {{ article.contenu | raw }}
+        </div>
+    </section>
+    <hr/>
+    
+{% endblock %}
+
+
+
+
+
